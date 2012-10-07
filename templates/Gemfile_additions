@@ -6,6 +6,9 @@ gem "settingslogic"
 gem 'anjlab-bootstrap-rails', '>= 2.1', :require => 'bootstrap-rails'
 gem "bootstrap_helper", :git => "git://github.com/xdite/bootstrap-helper.git"
 
+gem "simple_form", "2.0.3"
+gem "will_paginate", "3.0.3"
+
 gem 'high_voltage'
 gem 'airbrake'
 
