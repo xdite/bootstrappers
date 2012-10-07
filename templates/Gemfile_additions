@@ -1,4 +1,5 @@
 
+gem "settingslogic"
 gem 'anjlab-bootstrap-rails', '>= 2.1', :require => 'bootstrap-rails'
 gem 'high_voltage'
 gem 'airbrake'

@@ -21,6 +21,9 @@ module Bootstrapers
       invoke :add_jquery_ui
       invoke :customize_gemfile
       invoke :setup_database
+      #invoke :configure_app
+      invoke :setup_stylesheets
+  
     end
 
     def remove_files_we_dont_need
@@ -63,6 +66,20 @@ module Bootstrapers
 
       build :create_database
     end
+
+    def configure_app
+      say 'Configuring app'
+      build :build_settings_from_config
+      # TODO
+    end
+
+    def setup_stylesheets
+      copy_file 'app/assets/stylesheets/application.css', 'app/assets/stylesheets/application.css.scss'
+      remove_file 'app/assets/stylesheets/application.css'
+      concat_file 'import_scss_styles', 'app/assets/stylesheets/application.css.scss'
+      create_file 'app/assets/stylesheets/_screen.scss'
+    end
+
 
     protected
 
