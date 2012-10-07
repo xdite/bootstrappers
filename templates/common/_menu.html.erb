@@ -1,0 +1,32 @@
+<div class="navbar navbar-fixed-top ">
+      <div class="navbar-inner top ">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <%= link_to(Setting.app_name, Setting.domain , :class => "brand" )%>
+
+          <%= render :partial => "common/search_form" %>
+
+   
+     
+          <div class="nav-collapse">
+      
+              <%= render_list :class => "nav" do |li|
+                li << link_to("Link-1","Link-1")
+                li << link_to("Link-2","Link-2")
+                li << link_to("Link-3","Link-3")
+              end %>
+              
+              <%= render :partial => "common/user_nav"%>
+
+          </div>
+    </div>
+  </div>
+
+  <%= yield :submenu %>
+
+</div>

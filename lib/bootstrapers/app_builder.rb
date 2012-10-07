@@ -23,6 +23,7 @@ module Bootstrapers
     def create_partials_directory
       empty_directory 'app/views/application'
       empty_directory 'app/views/pages'
+      empty_directory 'app/views/common'
     end
 
     def create_application_layout
@@ -37,6 +38,10 @@ module Bootstrapers
 
     def create_common_stylesheets
       directory 'stylesheets', 'app/assets/stylesheets'
+    end
+
+    def create_common_partial
+      directory 'common', 'app/views/common'
     end
 
     def add_jquery_ui

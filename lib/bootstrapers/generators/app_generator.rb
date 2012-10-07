@@ -17,6 +17,7 @@ module Bootstrapers
       invoke :remove_files_we_dont_need
       invoke :setup_development_environment
       invoke :create_bootstrapers_views
+      invoke :create_common_partial
       invoke :create_common_javascripts
       invoke :create_common_stylesheets
       invoke :add_jquery_ui
@@ -43,6 +44,11 @@ module Bootstrapers
       say 'Creating bootstrapers views'
       build :create_partials_directory
       build :create_application_layout
+    end
+
+    def create_common_partial
+      say 'Pulling in some common partials'
+      build :create_common_partial
     end
 
     def create_common_javascripts

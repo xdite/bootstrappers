@@ -1,0 +1,26 @@
+<ul class="nav pills pull-right">
+
+  <% if current_user %>
+  
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="<%= user_path(current_user) %>">
+          <%= current_user.name %>
+      </a>
+      <%= render_list :class => "dropdown-menu" do |li|
+          li << link_to("Logout",destroy_user_session_path, :method => :delete )
+      end %>
+
+    </li>
+
+
+
+
+
+<% else %>
+  <li> <%= link_to( "Sing Up" ,new_user_registration_path) %> </li>
+  <li> <%= link_to( "Login", new_user_session_path )  %> </li>
+    
+<% end %>
+
+
+</ul>
