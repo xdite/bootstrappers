@@ -72,5 +72,20 @@ module Bootstrapers
       replace_in_file 'config/routes.rb', /Application\.routes\.draw do.*end/m, "Application.routes.draw do\nend"
     end
 
+    def gitignore_files
+      concat_file 'bootstrapers_gitignore', '.gitignore'
+      ['app/models',
+       'app/assets/images',
+       'app/views/pages',
+       'db/migrate',
+       'log',
+      ].each do |dir|
+        empty_directory_with_gitkeep dir
+      end
+    end
+
+    def init_git
+      run 'git init'
+    end
   end
 end

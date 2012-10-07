@@ -25,6 +25,7 @@ module Bootstrapers
       invoke :setup_stylesheets
       invoke :remove_routes_comment_lines
       invoke :setup_root_route
+      invoke :setup_git
     end
 
     def remove_files_we_dont_need
@@ -93,6 +94,20 @@ module Bootstrapers
 
     def setup_root_route
       build :setup_root_route
+    end
+
+    def setup_git
+      say 'Initializing git'
+      invoke :setup_gitignore
+      invoke :init_git
+    end
+
+    def setup_gitignore
+      build :gitignore_files
+    end
+
+    def init_git
+      build :init_git
     end
 
     protected
