@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%%= render_page_title_tag %>
+  <%%= render_page_description_meta_tag %>
+  <%%= render_page_keywords_meta_tag %>
+  <%%= render_page_image_link_tag %>
+  <%%= csrf_meta_tag %>
+
+  <%%= stylesheet_link_tag "application" %>
+  
+  <%%= yield :stylesheets %>
+
+  <meta property="og:title"       content="<%%= page_title ||  SeoHelper.configuration.site_name %>"/>
+  <meta property="og:description" content="<%%= page_description || SeoHelper.configuration.default_page_description %>"/>
+  <meta property="og:image:url"       content="<%%= page_image ||  SeoHelper.configuration.default_page_image %>"/>
+
+</head>
+
+<%%= render_body_tag %>
+
+<%%= render :partial => "common/menu" %>
+
+  <div class="container">
+
+      <%%= notice_message %>
+
+      <div class="content">
+        <div class="row">
+          <%%= yield %>
+          <%%= yield (:sidebar) %>
+        </div> 
+    
+      </div>
+
+      <%%= render :partial => "common/footer" %>    
+  </div>
+
+
+
+  
+
+  <%%= render :partial => "common/bootstrap_modal" %>    
+  <%%= render :partial => "common/facebook_js" %>
+  <%%= render :partial => "common/google_analytics" %>
+ 
+  <%%= javascript_include_tag "application" %>
+
+  <%%= yield :javascripts %>
+
+
+</body>
+</html>

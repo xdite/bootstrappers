@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require File.expand_path(File.join('..', 'lib', 'bootstrapers', 'generators', 'app_generator'), File.dirname(__FILE__))
+require File.expand_path(File.join('..', 'lib', 'bootstrapers', 'actions'), File.dirname(__FILE__))
+require File.expand_path(File.join('..', 'lib', 'bootstrapers', 'app_builder'), File.dirname(__FILE__))
+
+templates_root = File.expand_path(File.join("..", "templates"), File.dirname(__FILE__))
+
+Bootstrapers::AppGenerator.source_root templates_root
+Bootstrapers::AppGenerator.source_paths << Rails::Generators::AppGenerator.source_root << templates_root
+Bootstrapers::AppGenerator.start
