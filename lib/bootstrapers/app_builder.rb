@@ -64,5 +64,13 @@ module Bootstrapers
       concat_file 'import_scss_styles', 'app/assets/stylesheets/application.css.scss'
     end
 
+    def setup_root_route
+      route "root :to => 'high_voltage/pages#show', :id => 'welcome'"
+    end
+
+    def remove_routes_comment_lines
+      replace_in_file 'config/routes.rb', /Application\.routes\.draw do.*end/m, "Application.routes.draw do\nend"
+    end
+
   end
 end

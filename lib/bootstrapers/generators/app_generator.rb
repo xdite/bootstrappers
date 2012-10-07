@@ -22,7 +22,9 @@ module Bootstrapers
       invoke :customize_gemfile
       invoke :setup_database
       #invoke :configure_app
-      #invoke :setup_stylesheets
+      invoke :setup_stylesheets
+      invoke :remove_routes_comment_lines
+      invoke :setup_root_route
     end
 
     def remove_files_we_dont_need
@@ -83,6 +85,14 @@ module Bootstrapers
     def setup_stylesheets
       say 'Set up stylesheets'
       build :setup_stylesheets
+    end
+
+    def remove_routes_comment_lines
+      build :remove_routes_comment_lines
+    end
+
+    def setup_root_route
+      build :setup_root_route
     end
 
     protected
