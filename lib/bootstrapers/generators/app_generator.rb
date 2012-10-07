@@ -22,8 +22,7 @@ module Bootstrapers
       invoke :customize_gemfile
       invoke :setup_database
       #invoke :configure_app
-      invoke :setup_stylesheets
-  
+      #invoke :setup_stylesheets
     end
 
     def remove_files_we_dont_need
@@ -73,13 +72,18 @@ module Bootstrapers
       # TODO
     end
 
-    def setup_stylesheets
-      copy_file 'app/assets/stylesheets/application.css', 'app/assets/stylesheets/application.css.scss'
-      remove_file 'app/assets/stylesheets/application.css'
-      concat_file 'import_scss_styles', 'app/assets/stylesheets/application.css.scss'
-      create_file 'app/assets/stylesheets/_screen.scss'
+
+
+    def customize_error_pages
+      say 'Customizing the 500/404/422 pages'
+      build :customize_error_pages
     end
 
+
+    def setup_stylesheets
+      say 'Set up stylesheets'
+      build :setup_stylesheets
+    end
 
     protected
 

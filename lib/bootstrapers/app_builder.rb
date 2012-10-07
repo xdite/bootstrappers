@@ -47,7 +47,10 @@ module Bootstrapers
     end
 
     def use_mysql_config_template
+ 
       template 'mysql_database.yml.erb', 'config/database.yml',
+        :force => true
+      template 'mysql_database.yml.erb', 'config/database.yml.example',
         :force => true
     end
 
@@ -55,7 +58,11 @@ module Bootstrapers
       bundle_command 'exec rake db:create'
     end
 
-    
+    def setup_stylesheets
+      copy_file 'app/assets/stylesheets/application.css', 'app/assets/stylesheets/application.css.scss'
+      remove_file 'app/assets/stylesheets/application.css'
+      concat_file 'import_scss_styles', 'app/assets/stylesheets/application.css.scss'
+    end
 
   end
 end
