@@ -13,6 +13,7 @@ module Bootstrapers
     def bootstrapers_customization
       invoke :remove_files_we_dont_need
       invoke :setup_development_environment
+      invoke :create_bootstrapers_views
     end
 
     def remove_files_we_dont_need
@@ -23,6 +24,12 @@ module Bootstrapers
     def setup_development_environment
       say 'Setting up the development environment'
       build :raise_delivery_errors
+    end
+
+    def create_bootstrapers_views
+      say 'Creating bootstrapers views'
+      build :create_partials_directory
+      build :create_application_layout
     end
 
     protected

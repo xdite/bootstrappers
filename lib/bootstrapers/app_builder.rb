@@ -20,5 +20,15 @@ module Bootstrapers
         'raise_delivery_errors = false', 'raise_delivery_errors = true'
     end
 
+    def create_partials_directory
+      empty_directory 'app/views/application'
+    end
+
+    def create_application_layout
+      template 'bootstrapers_layout.html.erb.erb',
+        'app/views/layouts/application.html.erb',
+        :force => true
+    end
+
   end
 end
