@@ -5,6 +5,9 @@ require 'rails/generators/rails/app/app_generator'
 module Bootstrapers
   class AppGenerator < Rails::Generators::AppGenerator
 
+    class_option :database, :type => :string, :aliases => '-d', :default => 'mysql',
+      :desc => "Preconfigure for selected database (options: #{DATABASES.join('/')})"
+
     def finish_template
       invoke :bootstrapers_customization
       super
@@ -16,6 +19,8 @@ module Bootstrapers
       invoke :create_bootstrapers_views
       invoke :create_common_javascripts
       invoke :add_jquery_ui
+      invoke :customize_gemfile
+      invoke :setup_database
     end
 
     def remove_files_we_dont_need
@@ -42,6 +47,21 @@ module Bootstrapers
     def add_jquery_ui
       say 'Add jQuery ui to the standard application.js'
       build :add_jquery_ui
+    end
+
+    def customize_gemfile
+      build :add_custom_gems
+      bundle_command 'install'
+    end
+
+    def setup_database
+      say 'Setting up database'
+
+      if 'mysql' == options[:database]
+        build :use_mysql_config_template
+      end
+
+      build :create_database
     end
 
     protected

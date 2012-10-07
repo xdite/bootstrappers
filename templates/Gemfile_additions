@@ -1,0 +1,12 @@
+
+gem 'anjlab-bootstrap-rails', '>= 2.1', :require => 'bootstrap-rails'
+gem 'high_voltage'
+gem 'airbrake'
+
+group :development do
+  gem 'foreman'
+end
+
+group :production do
+  gem 'newrelic_rpm'
+end

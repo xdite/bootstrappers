@@ -39,5 +39,21 @@ module Bootstrapers
         "//= require jquery-ui\n", :before => '//= require_tree .'
     end
 
+    def add_custom_gems
+      additions_path = find_in_source_paths 'Gemfile_additions'
+      new_gems = File.open(additions_path).read
+      inject_into_file 'Gemfile', "\n#{new_gems}",
+      :after => /gem 'jquery-rails'/
+    end
+
+    def use_mysql_config_template
+      template 'mysql_database.yml.erb', 'config/database.yml',
+        :force => true
+    end
+
+    def create_database
+      bundle_command 'exec rake db:create'
+    end
+
   end
 end
