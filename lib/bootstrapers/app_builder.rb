@@ -22,6 +22,7 @@ module Bootstrapers
 
     def create_partials_directory
       empty_directory 'app/views/application'
+      empty_directory 'app/views/pages'
     end
 
     def create_application_layout
@@ -65,6 +66,8 @@ module Bootstrapers
     end
 
     def setup_root_route
+      template 'welcome.html.erb', 'app/views/pages/welcome.html.erb',:force => true
+      
       route "root :to => 'high_voltage/pages#show', :id => 'welcome'"
     end
 
