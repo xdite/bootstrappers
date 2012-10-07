@@ -4,6 +4,8 @@ gem 'seo_helper', '~> 1.0'
 gem "settingslogic"
 
 gem 'anjlab-bootstrap-rails', '>= 2.1', :require => 'bootstrap-rails'
+gem "bootstrap_helper", :git => "git://github.com/xdite/bootstrap-helper.git"
+
 gem 'high_voltage'
 gem 'airbrake'
 

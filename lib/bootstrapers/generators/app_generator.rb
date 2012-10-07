@@ -18,6 +18,7 @@ module Bootstrapers
       invoke :setup_development_environment
       invoke :create_bootstrapers_views
       invoke :create_common_javascripts
+      invoke :create_common_stylesheets
       invoke :add_jquery_ui
       invoke :customize_gemfile
       invoke :setup_database
@@ -47,6 +48,11 @@ module Bootstrapers
     def create_common_javascripts
       say 'Pulling in some common javascripts'
       build :create_common_javascripts
+    end
+
+    def create_common_stylesheets
+      say 'Pulling in some common stylesheets'
+      build :create_common_stylesheets
     end
 
     def add_jquery_ui
