@@ -21,7 +21,7 @@ module Bootstrapers
       invoke :add_jquery_ui
       invoke :customize_gemfile
       invoke :setup_database
-      #invoke :configure_app
+      invoke :configure_app
       invoke :setup_stylesheets
       invoke :remove_routes_comment_lines
       invoke :setup_root_route

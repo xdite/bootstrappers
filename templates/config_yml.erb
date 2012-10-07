@@ -1,0 +1,18 @@
+defaults: &defaults
+  app_name: "<%= app_name %>"
+  domain: "http://<%= app_name %>.dev"    
+  facebook_app_id: 
+  facebook_secret: 
+  admin_emails: 
+    - ""
+  google_analytics_key: ""
+  default_logo_url: "/logo.png"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

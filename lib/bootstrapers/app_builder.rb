@@ -59,6 +59,13 @@ module Bootstrapers
       bundle_command 'exec rake db:create'
     end
 
+    def build_settings_from_config
+      # seo_helper initialize setting
+      template 'setting.rb', 'app/models/setting.rb',:force => true
+      template 'seo_helper.rb', 'config/initializers/seo_helper.rb',:force => true
+      template 'config_yml.erb', 'config/config.yml',:force => true
+    end
+
     def setup_stylesheets
       copy_file 'app/assets/stylesheets/application.css', 'app/assets/stylesheets/application.css.scss'
       remove_file 'app/assets/stylesheets/application.css'
@@ -67,7 +74,6 @@ module Bootstrapers
 
     def setup_root_route
       template 'welcome.html.erb', 'app/views/pages/welcome.html.erb',:force => true
-      
       route "root :to => 'high_voltage/pages#show', :id => 'welcome'"
     end
 
