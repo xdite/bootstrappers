@@ -31,6 +31,7 @@ It includes application gems like:
 * [Settingslogic](https://github.com/binarylogic/settingslogic)
 * [Airbrake](https://github.com/airbrake/airbrake)
 * [NewRelic RPM](https://github.com/newrelic/rpm)
+* [Turbo Sprockets for Rails 3.2.x](https://github.com/ndbroadbent/turbo-sprockets-rails3) Speeds up your Rails 3 rake assets:precompile by only recompiling changed assets
 
 
 ## Contributing
