@@ -2,8 +2,8 @@
   <% if current_user %>
   
     <li class="dropdown">
-      <%= link_to user_path(current_user), :class => "dropdown-toggle", :data => { :toogle => "dropdown" } do %>
-        <%= current_user.name %>
+      <%= link_to "/accoount" , :class => "dropdown-toggle", :data => { :toogle => "dropdown" } do %>
+        <%= current_user.email %>
       <% end %>
 
       <%= render_list :class => "dropdown-menu" do |li|
