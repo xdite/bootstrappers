@@ -24,7 +24,7 @@ module Bootstrappers
       invoke :customize_gemfile
       invoke :setup_database
       invoke :configure_app
-      #   invoke :create_initializers
+      invoke :create_initializers
       invoke :setup_stylesheets
       invoke :remove_routes_comment_lines
       invoke :setup_root_route
