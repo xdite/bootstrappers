@@ -59,4 +59,4 @@ some codes of bootstrappers were borrowed from [suspenders](https://github.com/t
 License
 -------
 
-Suspenders is Copyright © 2012 rocodev. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+Bootstrappers is Copyright © 2012 rocodev. It is free software, and may be redistributed under the terms specified in the LICENSE file.
