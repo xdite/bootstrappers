@@ -12,8 +12,11 @@ gem "will_paginate", "3.0.3"
 gem 'high_voltage'
 gem 'airbrake'
 
-group :development do
-  gem 'foreman'
+group :development do 
+  gem "capistrano"
+  gem "cape"
+  gem "magic_encoding"
+  gem "annotate"
 end
 
 group :production do
