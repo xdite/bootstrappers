@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Bootstrapers::VERSION
   gem.authors       = ["xdite"]
   gem.email         = ["xdite@rocodev.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{ Write a gem description}
+  gem.summary       = %q{ Write a gem summary}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)

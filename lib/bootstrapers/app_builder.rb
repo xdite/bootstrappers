@@ -56,6 +56,11 @@ module Bootstrapers
       :after => /gem 'jquery-rails'/
     end
 
+    def add_devise_gem
+      inject_into_file 'Gemfile', "\ngem 'devise'",
+        :after => /gem 'jquery-rails'/
+    end
+
     def use_mysql_config_template
  
       template 'mysql_database.yml.erb', 'config/database.yml',
@@ -68,11 +73,22 @@ module Bootstrapers
       bundle_command 'exec rake db:create'
     end
 
+    def generate_devise
+      generate 'devise:install'
+      generate 'devise User'
+    end
+
     def build_settings_from_config
-      # seo_helper initialize setting
+
       template 'setting.rb', 'app/models/setting.rb',:force => true
-      template 'seo_helper.rb', 'config/initializers/seo_helper.rb',:force => true
+      ## seo_helper initialize setting
+      # FIXME : temp mark
+      # template 'seo_helper.rb', 'config/initializers/seo_helper.rb',:force => true
       template 'config_yml.erb', 'config/config.yml',:force => true
+    end
+
+    def create_initializers
+      directory 'initializers', 'config/initializers'
     end
 
     def setup_stylesheets

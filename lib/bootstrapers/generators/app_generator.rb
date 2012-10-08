@@ -24,6 +24,7 @@ module Bootstrapers
       invoke :customize_gemfile
       invoke :setup_database
       invoke :configure_app
+   #   invoke :create_initializers
       invoke :setup_stylesheets
       invoke :remove_routes_comment_lines
       invoke :setup_root_route
@@ -68,6 +69,7 @@ module Bootstrapers
 
     def customize_gemfile
       build :add_custom_gems
+      build :add_devise_gem
       bundle_command 'install'
     end
 
@@ -83,10 +85,19 @@ module Bootstrapers
 
     def configure_app
       say 'Configuring app'
+      build :setup_devise
       build :build_settings_from_config
       # TODO
     end
 
+    def create_initializers
+      say 'create_initializers'
+      build :create_initializers
+    end 
+
+    def setup_devise
+      build :generate_devise
+    end
 
 
     def customize_error_pages
