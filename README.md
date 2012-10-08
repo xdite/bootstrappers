@@ -24,6 +24,7 @@ It includes application gems like:
 * [Bootstrap Helper](https://github.com/xdite/bootstrap-helper)
 * [SimpleForm](https://github.com/plataformatec/simple_form)
 * [WillPaginate](https://github.com/mislav/will_paginate/)
+* [Compass](http://compass-style.org/)
 * [SeoHelper](https://github.com/techbang/seo_helper)
 * [Capistrano](https://github.com/capistrano/capistrano)
 * [Cape](https://github.com/njonsson/cape)
