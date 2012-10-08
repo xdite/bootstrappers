@@ -1,3 +1,3 @@
-module Bootstrapers
+module Bootstrappers
   VERSION = "0.0.1"
 end

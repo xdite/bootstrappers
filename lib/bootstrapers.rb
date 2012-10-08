@@ -1,5 +1,5 @@
-require "bootstrapers/version"
+require "bootstrappers/version"
 
-module Bootstrapers
+module Bootstrappers
   # Your code goes here...
 end

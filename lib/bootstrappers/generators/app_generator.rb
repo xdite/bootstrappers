@@ -2,21 +2,21 @@ require 'rails/generators'
 require 'rails/generators/rails/app/app_generator'
 
 
-module Bootstrapers
+module Bootstrappers
   class AppGenerator < Rails::Generators::AppGenerator
 
     class_option :database, :type => :string, :aliases => '-d', :default => 'mysql',
       :desc => "Preconfigure for selected database (options: #{DATABASES.join('/')})"
 
     def finish_template
-      invoke :bootstrapers_customization
+      invoke :bootstrappers_customization
       super
     end
 
-    def bootstrapers_customization
+    def bootstrappers_customization
       invoke :remove_files_we_dont_need
       invoke :setup_development_environment
-      invoke :create_bootstrapers_views
+      invoke :create_bootstrappers_views
       invoke :create_common_partial
       invoke :create_common_javascripts
       invoke :create_common_stylesheets
@@ -41,8 +41,8 @@ module Bootstrapers
       build :raise_delivery_errors
     end
 
-    def create_bootstrapers_views
-      say 'Creating bootstrapers views'
+    def create_bootstrappers_views
+      say 'Creating bootstrappers views'
       build :create_partials_directory
       build :create_application_layout
     end
@@ -139,7 +139,7 @@ module Bootstrapers
     protected
 
     def get_builder_class
-      Bootstrapers::AppBuilder
+      Bootstrappers::AppBuilder
     end
 
   end

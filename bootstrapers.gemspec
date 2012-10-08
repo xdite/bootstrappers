@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'bootstrapers/version'
+require 'bootstrappers/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "bootstrapers"
-  gem.version       = Bootstrapers::VERSION
+  gem.name          = "bootstrappers"
+  gem.version       = Bootstrappers::VERSION
   gem.authors       = ["xdite"]
   gem.email         = ["xdite@rocodev.com"]
   gem.description   = %q{ Write a gem description}

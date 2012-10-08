@@ -1,7 +1,7 @@
-module Bootstrapers
+module Bootstrappers
   class AppBuilder < Rails::AppBuilder
 
-    include Bootstrapers::Actions
+    include Bootstrappers::Actions
 
     def readme
       template 'README.md.erb', 'README.md'
@@ -27,7 +27,7 @@ module Bootstrapers
     end
 
     def create_application_layout
-      template 'bootstrapers_layout.html.erb.erb',
+      template 'bootstrappers_layout.html.erb.erb',
         'app/views/layouts/application.html.erb',
         :force => true
     end
@@ -112,7 +112,7 @@ module Bootstrapers
     end
 
     def gitignore_files
-      concat_file 'bootstrapers_gitignore', '.gitignore'
+      concat_file 'bootstrappers_gitignore', '.gitignore'
       ['app/models',
        'app/assets/images',
        'app/views/pages',
