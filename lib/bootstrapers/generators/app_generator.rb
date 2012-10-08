@@ -20,11 +20,11 @@ module Bootstrapers
       invoke :create_common_partial
       invoke :create_common_javascripts
       invoke :create_common_stylesheets
-      invoke :add_jquery_ui
+      invoke :add_common_js_library
       invoke :customize_gemfile
       invoke :setup_database
       invoke :configure_app
-   #   invoke :create_initializers
+      #   invoke :create_initializers
       invoke :setup_stylesheets
       invoke :remove_routes_comment_lines
       invoke :setup_root_route
@@ -62,10 +62,13 @@ module Bootstrapers
       build :create_common_stylesheets
     end
 
-    def add_jquery_ui
-      say 'Add jQuery ui to the standard application.js'
+    def add_common_js_library
+      say 'Add add_common_js_library to the standard application.js'
       build :add_jquery_ui
+      build :add_bootstrap_js
     end
+
+
 
     def customize_gemfile
       build :add_custom_gems
@@ -93,7 +96,7 @@ module Bootstrapers
     def create_initializers
       say 'create_initializers'
       build :create_initializers
-    end 
+    end
 
     def setup_devise
       build :generate_devise

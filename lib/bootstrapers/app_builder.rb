@@ -49,6 +49,11 @@ module Bootstrapers
         "//= require jquery-ui\n", :before => '//= require_tree .'
     end
 
+    def add_bootstrap_js
+      inject_into_file 'app/assets/javascripts/application.js',
+        "//= require twitter/bootstrap-alert\n", :before => '//= require_tree .'
+    end
+
     def add_custom_gems
       additions_path = find_in_source_paths 'Gemfile_additions'
       new_gems = File.open(additions_path).read
