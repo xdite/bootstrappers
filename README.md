@@ -35,6 +35,21 @@ It includes application gems like:
 * [Turbo Sprockets for Rails 3.2.x](https://github.com/ndbroadbent/turbo-sprockets-rails3) Speeds up your Rails 3 rake assets:precompile by only recompiling changed assets
 
 
+## USAGE
+
+MySQL setting:
+
+```
+development: &default
+  adapter: mysql2
+  encoding: utf8
+  database: <%= app_name %>_development
+  host: localhost
+  username: root
+  password: ""
+```  
+
+
 ## Contributing
 
 1. Fork it
