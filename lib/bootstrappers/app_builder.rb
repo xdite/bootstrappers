@@ -86,9 +86,6 @@ module Bootstrappers
     def build_settings_from_config
 
       template 'setting.rb', 'app/models/setting.rb',:force => true
-      ## seo_helper initialize setting
-      # FIXME : temp mark
-      # template 'seo_helper.rb', 'config/initializers/seo_helper.rb',:force => true
       template 'config_yml.erb', 'config/config.yml',:force => true
     end
 
