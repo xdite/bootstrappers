@@ -1,4 +1,4 @@
-Copyright (c) 2012 rocodev,inc
+Copyright (c) 2012 xdite
 Copyright (c) 2010-2012 Mike Burns and thoughtbot, inc. ( from suspenders)
 
 MIT License
