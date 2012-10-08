@@ -1,0 +1,11 @@
+body{
+  padding-top: 60px;
+}
+
+ul.nav li.dropdown:hover .dropdown-menu{
+    display: block;    
+}
+
+.navbar .dropdown-menu {
+ margin-top: 0px;
+}
