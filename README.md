@@ -1,24 +1,37 @@
 # Bootstrappers
 
-TODO: Write a gem description
+Bootstrappers is the base Rails application used at [Rocodev](http://rocodev.com).
 
 ## Installation
 
-Add this line to your application's Gemfile:
+First install the bootstrappers gem:
 
-    gem 'bootstrappers'
+    gem install bootstrappers
 
-And then execute:
+Then run:
 
-    $ bundle
+    $ bootstrappers project_name
 
-Or install it yourself as:
 
-    $ gem install bootstrappers
+## Gemfile
 
-## Usage
+To see the latest and greatest gems, look at Suspenders' template/Gemfile_additions, which will be appended to the default generated projectname/Gemfile.
 
-TODO: Write usage instructions here
+
+It includes application gems like:
+
+* [Bootstrap SCSS](https://github.com/anjlab/bootstrap-rails)
+* [Bootstrap Helper](https://github.com/xdite/bootstrap-helper)
+* [SimpleForm](https://github.com/plataformatec/simple_form)
+* [WillPaginate](https://github.com/mislav/will_paginate/)
+* [SeoHelper](https://github.com/techbang/seo_helper)
+* [Capistrano](https://github.com/capistrano/capistrano)
+* [Cape](https://github.com/njonsson/cape)
+* [Magic encoding](https://github.com/m-ryan/magic_encoding)
+* [Settingslogic](https://github.com/binarylogic/settingslogic)
+* [Airbrake](https://github.com/airbrake/airbrake)
+* [NewRelic RPM](https://github.com/newrelic/rpm)
+
 
 ## Contributing
 
@@ -27,3 +40,21 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+
+## Issues
+
+
+If you have problems, please create a [Github issue](https://github.com/xdite/bootstrappers/issues).
+
+## Credits
+
+Bootstrappers is maintained and funded by [@xdite](http://github.com/xdite)
+
+some codes of bootstrappers were borrowed from [suspenders](https://github.com/thoughtbot/suspenders)
+
+
+License
+-------
+
+Suspenders is Copyright © 2012 rocodev. It is free software, and may be redistributed under the terms specified in the LICENSE file.
