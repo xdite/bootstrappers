@@ -90,7 +90,7 @@ module Bootstrappers
       say 'Configuring app'
       build :setup_devise
       build :build_settings_from_config
-      # TODO
+
     end
 
     def create_initializers
