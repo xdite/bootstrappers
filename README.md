@@ -35,9 +35,9 @@ It includes application gems like:
 * [Turbo Sprockets for Rails 3.2.x](https://github.com/ndbroadbent/turbo-sprockets-rails3) Speeds up your Rails 3 rake assets:precompile by only recompiling changed assets
 
 
-## USAGE
+## Remind
 
-MySQL setting:
+config/database.yml default setting:
 
 ```
 development: &default
@@ -48,6 +48,8 @@ development: &default
   username: root
   password: ""
 ```  
+
+but we still ask for your preferences
 
 
 ## Contributing
