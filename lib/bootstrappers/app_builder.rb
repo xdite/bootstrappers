@@ -76,7 +76,7 @@ module Bootstrappers
       db_password = ask("What is your local database password? ['']")
       db_password = "''" if db_password.blank?
       replace_in_file 'config/database.yml', 'username: root', "username: #{db_user_name}"
-      replace_in_file 'config/database.yml', 'password: ""', "pasword: '#{db_password}'"
+      replace_in_file 'config/database.yml', 'password: ""', "password: '#{db_password}'"
       
       
     end
