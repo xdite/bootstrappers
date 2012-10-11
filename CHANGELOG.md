@@ -1,3 +1,5 @@
+0.0.8 (Oct 12, 2012)
+  * fix db config replace problem
 0.0.7 (Oct 10, 2012)
   * fix typo, add more guides
 0.0.6 (Oct 10, 2012)

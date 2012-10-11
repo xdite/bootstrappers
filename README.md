@@ -70,7 +70,7 @@ If you have problems, please create a [Github issue](https://github.com/xdite/bo
 
 Bootstrappers is maintained and funded by [@xdite](http://github.com/xdite)
 
-some codes of bootstrappers were borrowed from [suspenders](https://github.com/thoughtbot/suspenders)
+some codes of bootstrappers were borrowed from [suspenders](https://github.com/thoughtbot/suspendersus)
 
 
 License
