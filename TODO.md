@@ -18,3 +18,4 @@
 * View Turtorial
   - menu
   - ajax
+* <https://speakerdeck.com/ken_c_lo/zurui-design> 
