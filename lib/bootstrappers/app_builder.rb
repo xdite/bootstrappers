@@ -37,6 +37,7 @@ module Bootstrappers
     end
 
     def create_common_stylesheets
+      remove_file 'app/assets/stylesheets/application.css'
       directory 'stylesheets', 'app/assets/stylesheets'
     end
 

@@ -25,7 +25,6 @@ module Bootstrappers
       invoke :setup_database
       invoke :configure_app
       invoke :create_initializers
-      invoke :setup_stylesheets
       invoke :remove_routes_comment_lines
       invoke :setup_root_route
       invoke :setup_git
@@ -64,8 +63,6 @@ module Bootstrappers
 
     def add_common_js_library
       say 'Add add_common_js_library to the standard application.js'
-      build :add_jquery_ui
-      build :add_bootstrap_js
     end
 
 
@@ -108,11 +105,6 @@ module Bootstrappers
       build :customize_error_pages
     end
 
-
-    def setup_stylesheets
-      say 'Set up stylesheets'
-      build :setup_stylesheets
-    end
 
     def remove_routes_comment_lines
       build :remove_routes_comment_lines
