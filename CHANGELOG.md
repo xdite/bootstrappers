@@ -1,6 +1,7 @@
 alpha
   * add powder to Gemfile
   * add capistrano-ext to Gemfile
+  * customized_error_pages
 0.0.9 (Nov 12, 2012)
   * fix application.css double loading css
   * bootstrap-helper bump to 2.1.2
