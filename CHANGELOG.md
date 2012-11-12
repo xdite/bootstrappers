@@ -1,4 +1,6 @@
 alpha
+
+0.1.0 (Nov 12, 2012)
   * add powder to Gemfile
   * add capistrano-ext to Gemfile
   * customized_error_pages
@@ -6,6 +8,8 @@ alpha
   * add open_graph_helper
   * add capistrano deploy file
   * add pry, pry-remote
+  * add Facebook like in menu bar
+  * add .social css & .group self clearfix
   
 0.0.9 (Nov 12, 2012)
   * fix application.css double loading css
