@@ -1,3 +1,18 @@
 @import "bootstrap-setting";
 @import "twitter/bootstrap";
 @import "bootstrap-override";
+
+.social{
+   float:left;
+   width: 90px;
+   padding: 5px;
+   padding-top: 10px;
+   border-right: none;
+}
+.social > div {
+  height: 20px;
+}
+.social > div > * {
+  display: block;
+  float: left;
+}

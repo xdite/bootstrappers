@@ -1,6 +1,11 @@
 <ul class="nav pills pull-right">
-  <% if current_user %>
-  
+
+    <li>
+      <div class="social"> <%=  fb_like(Setting.domain) %>  </div>
+    </li>
+
+  <% if current_user %>    
+
     <li class="dropdown">
       <%= link_to "/accoount" , :class => "dropdown-toggle", :data => { :toogle => "dropdown" } do %>
         <%= current_user.email %>
