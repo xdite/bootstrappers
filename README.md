@@ -31,6 +31,7 @@ It includes application gems like:
 * [Capistrano](https://github.com/capistrano/capistrano)
 * [Cape](https://github.com/njonsson/cape)
 * [Magic encoding](https://github.com/m-ryan/magic_encoding)
+* [Annotate](https://github.com/ctran/annotate_models)
 * [Settingslogic](https://github.com/binarylogic/settingslogic)
 * [Airbrake](https://github.com/airbrake/airbrake)
 * [NewRelic RPM](https://github.com/newrelic/rpm)

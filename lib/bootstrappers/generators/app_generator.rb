@@ -22,6 +22,7 @@ module Bootstrappers
       invoke :create_common_stylesheets
       invoke :add_common_js_library
       invoke :customize_gemfile
+      invoke :setup_capistrano
       invoke :setup_database
       invoke :configure_app
       invoke :create_initializers
@@ -71,6 +72,11 @@ module Bootstrappers
       build :add_custom_gems
       build :add_devise_gem
       bundle_command 'install'
+    end
+
+    def setup_capistrano
+      build :create_capistrano_files
+      say 'Setting up capinstrano'
     end
 
     def setup_database

@@ -82,6 +82,13 @@ module Bootstrappers
       
     end
 
+    def create_capistrano_files
+       template 'capistrano/deploy_rb.erb', 'config/deploy.rb',:force => true
+       template 'capistrano/Capfile', 'Capfile',:force => true
+       empty_directory 'config/deploy'
+       directory 'capistrano/config/', 'config/deploy'
+    end
+
     def create_database
       bundle_command 'exec rake db:create'
     end
