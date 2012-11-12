@@ -9,10 +9,7 @@
   - replace sender to Setting.email_sender
 * Cancan
 * Testing Tool
-* Command Line Tool
-  - pry
 * Social
-  - open_graph_helper
   - google_plus_one_helper
 * View Turtorial
   - menu
@@ -21,7 +18,6 @@
 * lib/tasks/dev.rake
 * carrierwave
   - uploader template
-* add .social to navbar
 * Capistrano
   - multistage
 * Amazon SES
