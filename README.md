@@ -20,22 +20,36 @@ To see the latest and greatest gems, look at Suspenders' template/Gemfile_additi
 
 It includes application gems like:
 
+### View / SCSS
 * [Bootstrap SCSS](https://github.com/anjlab/bootstrap-rails)
 * [Bootstrap Helper](https://github.com/xdite/bootstrap-helper)
 * [SimpleForm](https://github.com/plataformatec/simple_form)
 * [WillPaginate](https://github.com/mislav/will_paginate/)
 * [Compass](http://compass-style.org/)
+
+### Photo Uplaod
+
 * [CarrierWave](https://github.com/jnicklas/carrierwave)
+
+### Social
+
 * [SeoHelper](https://github.com/techbang/seo_helper)
 * [OpenGraphHelper](https://github.com/techbang/open_graph_helper)
+
+### Deploy 
+
 * [Capistrano](https://github.com/capistrano/capistrano)
 * [Cape](https://github.com/njonsson/cape)
-* [Magic encoding](https://github.com/m-ryan/magic_encoding)
-* [Annotate](https://github.com/ctran/annotate_models)
-* [Settingslogic](https://github.com/binarylogic/settingslogic)
 * [Airbrake](https://github.com/airbrake/airbrake)
 * [NewRelic RPM](https://github.com/newrelic/rpm)
 * [Turbo Sprockets for Rails 3.2.x](https://github.com/ndbroadbent/turbo-sprockets-rails3) Speeds up your Rails 3 rake assets:precompile by only recompiling changed assets
+
+### CommandLine
+* [Magic encoding](https://github.com/m-ryan/magic_encoding)
+* [Annotate](https://github.com/ctran/annotate_models)
+* [Settingslogic](https://github.com/binarylogic/settingslogic)
+* [Pry](http://pryrepl.org/)
+
 
 
 ## Remind

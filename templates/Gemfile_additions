@@ -29,6 +29,8 @@ group :development do
   gem "magic_encoding"
   gem "annotate"
   gem "powder"
+  gem "pry-nav"
+  gem "pry-remote"
 end
 
 group :production do
