@@ -1,13 +1,12 @@
 ## TODO 
 
-* Capistrano Task
-  - rvm 
 * Search
   - ransack
 * OmniAuth
   - Facebook
 * Devise
   - Login Form refactor
+  - replace sender to Setting.email_sender
 * Cancan
 * Testing Tool
 * Command Line Tool
@@ -23,3 +22,6 @@
 * carrierwave
   - uploader template
 * add .social to navbar
+* Capistrano
+  - multistage
+* Amazon SES
