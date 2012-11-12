@@ -31,7 +31,7 @@ It includes application gems like:
 
 * [CarrierWave](https://github.com/jnicklas/carrierwave)
 
-### Social
+### Social / SEO
 
 * [SeoHelper](https://github.com/techbang/seo_helper)
 * [OpenGraphHelper](https://github.com/techbang/open_graph_helper)
