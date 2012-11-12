@@ -33,6 +33,7 @@ module Bootstrappers
     end
 
     def create_common_javascripts
+      remove_file 'app/assets/javascripts/application.js'
       directory 'javascripts', 'app/assets/javascripts'
     end
 
