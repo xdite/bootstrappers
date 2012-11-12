@@ -3,7 +3,7 @@ gem "seo_helper", "~> 1.0"
 gem "open_graph_helper"
 
 gem "rmagick"
-gem "carrier-wave"
+gem "carrierwave"
 gem "carrierwave-meta"
 
 gem "settingslogic"
