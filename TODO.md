@@ -15,7 +15,6 @@
   - menu
   - ajax
 * <https://speakerdeck.com/ken_c_lo/zurui-design> 
-* lib/tasks/dev.rake
 * carrierwave
   - uploader template
 * Capistrano
