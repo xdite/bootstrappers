@@ -21,6 +21,7 @@ module Bootstrappers
       invoke :create_common_javascripts
       invoke :create_common_stylesheets
       invoke :add_common_js_library
+      invoke :add_common_rake_tasks
       invoke :customize_gemfile
       invoke :setup_capistrano
       invoke :setup_database
@@ -63,7 +64,12 @@ module Bootstrappers
     end
 
     def add_common_js_library
-      say 'Add add_common_js_library to the standard application.js'
+      say 'Add coomon javascripts to the standard application.js'
+    end
+
+    def add_common_rake_tasks
+      say 'Add common rake tasks'
+      build :add_common_rake_tasks
     end
 
 
