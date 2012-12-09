@@ -1,4 +1,8 @@
 # -*- encoding : utf-8 -*-
+
+require "./config/boot"
+require "bundler/capistrano"
+
 default_environment["PATH"] = "/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin"
 
 set :application, "<%= app_name %>"

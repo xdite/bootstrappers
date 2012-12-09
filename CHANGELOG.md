@@ -1,5 +1,8 @@
 alpha
-  * add lib/tasks
+  * add lib/tasks 
+  * fixing typo
+  * fixing deploy file
+  
 0.1.0 (Nov 12, 2012)
   * add powder to Gemfile
   * add capistrano-ext to Gemfile

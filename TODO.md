@@ -20,3 +20,5 @@
 * Capistrano
   - multistage
 * Amazon SES
+* Caching
+  - add config.cache_stor t0 dali
