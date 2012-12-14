@@ -26,3 +26,4 @@
 * Refactor Devise Views
 * add group hack to bootstrap css
 * add login required and require admin to applicaiton controller
+* add rvm-capistrano
