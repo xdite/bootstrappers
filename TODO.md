@@ -23,3 +23,4 @@
 * Caching
   - add config.cache_stor t0 dali
 * Better Errors
+* Refactor Devise Views
