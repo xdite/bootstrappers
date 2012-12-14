@@ -24,3 +24,5 @@
   - add config.cache_stor t0 dali
 * Better Errors
 * Refactor Devise Views
+* add group hack to bootstrap css
+* add login required and require admin to applicaiton controller
