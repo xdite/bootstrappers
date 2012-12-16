@@ -13,7 +13,6 @@ module Bootstrappers
       remove_file 'app/assets/images/rails.png'
     end
 
-    
     def create_partials_directory
       empty_directory 'app/views/application'
       empty_directory 'app/views/pages'

@@ -2,6 +2,7 @@
 
 require File.expand_path(File.join('..', 'lib', 'bootstrappers', 'generators', 'app_generator'), File.dirname(__FILE__))
 require File.expand_path(File.join('..', 'lib', 'bootstrappers', 'actions'), File.dirname(__FILE__))
+require File.expand_path(File.join('..', 'lib', 'bootstrappers', 'layout_actions'), File.dirname(__FILE__))
 require File.expand_path(File.join('..', 'lib', 'bootstrappers', 'app_builder'), File.dirname(__FILE__))
 
 templates_root = File.expand_path(File.join("..", "templates"), File.dirname(__FILE__))
