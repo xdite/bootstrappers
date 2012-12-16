@@ -28,6 +28,7 @@ module Bootstrappers
       invoke :configure_app
       invoke :create_initializers
       invoke :remove_routes_comment_lines
+      invoke :add_common_method_to_application_controller
       invoke :setup_root_route
       invoke :setup_git
     end
@@ -72,8 +73,6 @@ module Bootstrappers
       build :add_common_rake_tasks
     end
 
-
-
     def customize_gemfile
       build :add_custom_gems
       build :add_devise_gem
@@ -109,17 +108,20 @@ module Bootstrappers
 
     def setup_devise
       build :generate_devise
+      build :replace_email_sender_for_devise
     end
-
 
     def customize_error_pages
       say 'Customizing the 500/404/422 pages'
       build :customize_error_pages
     end
 
-
     def remove_routes_comment_lines
       build :remove_routes_comment_lines
+    end
+
+    def add_common_method_to_application_controller
+      build :add_common_method_to_application_controller
     end
 
     def setup_root_route

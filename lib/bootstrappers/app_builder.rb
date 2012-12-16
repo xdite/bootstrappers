@@ -6,8 +6,7 @@ module Bootstrappers
 
 
     def raise_delivery_errors
-      replace_in_file 'config/environments/development.rb',
-        'raise_delivery_errors = false', 'raise_delivery_errors = true'
+      replace_in_file 'config/environments/development.rb', 'raise_delivery_errors = false', 'raise_delivery_errors = true'
     end
 
     def add_common_rake_tasks
@@ -33,8 +32,10 @@ module Bootstrappers
     def generate_devise
       generate 'devise:install'
       generate 'devise User'
-      replace_in_file 'config/initializers/devise.rb', /config\.mailer_sender = \".+\"/ , "config.mailer_sender = Setting.email_sender"
+    end
 
+    def replace_email_sender_for_devise
+      replace_in_file 'config/initializers/devise.rb', /config\.mailer_sender = \".+\"/ , "config.mailer_sender = Setting.email_sender"
     end
 
     def gitignore_files
@@ -62,6 +63,10 @@ module Bootstrappers
 
     def create_initializers
       directory 'initializers', 'config/initializers'
+    end
+
+    def add_common_method_to_application_controller
+      template 'application_controller_rb', 'app/controllers/application_controller.rb',:force => true
     end
 
 

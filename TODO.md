@@ -6,7 +6,6 @@
   - Facebook
 * Devise
   - Login Form refactor
-  - replace sender to Setting.email_sender
 * Cancan
 * Testing Tool
 * Social
