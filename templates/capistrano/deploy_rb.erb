@@ -2,6 +2,7 @@
 
 require "./config/boot"
 require "bundler/capistrano"
+require "rvm-capistrano"
 
 default_environment["PATH"] = "/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin"
 
@@ -19,6 +20,8 @@ set :deploy_to, "/home/apps/#{application}"
 set :runner, "apps"
 set :deploy_via, :remote_cache
 set :git_shallow_clone, 1
+set :use_sudo, false
+set :rvm_ruby_string, '1.9.3'
 
 role :web, "<%= app_name %>.com"                          # Your HTTP server, Apache/etc
 role :app, "<%= app_name %>.com"                         # This may be the same as your `Web` server

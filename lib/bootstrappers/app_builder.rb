@@ -10,7 +10,6 @@ module Bootstrappers
         'raise_delivery_errors = false', 'raise_delivery_errors = true'
     end
 
-
     def add_common_rake_tasks
       directory 'tasks', 'lib/tasks'
     end
@@ -21,10 +20,10 @@ module Bootstrappers
     end
 
     def create_capistrano_files
-       template 'capistrano/deploy_rb.erb', 'config/deploy.rb',:force => true
-       template 'capistrano/Capfile', 'Capfile',:force => true
-       empty_directory 'config/deploy'
-       directory 'capistrano/deploy', 'config/deploy'
+      template 'capistrano/deploy_rb.erb', 'config/deploy.rb',:force => true
+      template 'capistrano/Capfile', 'Capfile',:force => true
+      empty_directory 'config/deploy'
+      directory 'capistrano/deploy', 'config/deploy'
     end
 
     def create_database
@@ -49,10 +48,9 @@ module Bootstrappers
     end
 
     def init_git
-      run 'git init'
+      run "git init"
     end
 
- 
 
     def build_settings_from_config
 
@@ -69,7 +67,7 @@ module Bootstrappers
       replace_in_file 'config/routes.rb', /Application\.routes\.draw do.*end/m, "Application.routes.draw do\nend"
     end
 
-        def use_mysql_config_template
+    def use_mysql_config_template
       template 'mysql_database.yml.erb', 'config/database.yml',:force => true
       template 'mysql_database.yml.erb', 'config/database.yml.example', :force => true
 
