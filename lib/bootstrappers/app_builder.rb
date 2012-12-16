@@ -15,14 +15,10 @@ module Bootstrappers
       directory 'tasks', 'lib/tasks'
     end
 
-
-
     def add_devise_gem
       inject_into_file 'Gemfile', "\ngem 'devise'",
       :after => /gem 'jquery-rails'/
     end
-
-
 
     def create_capistrano_files
        template 'capistrano/deploy_rb.erb', 'config/deploy.rb',:force => true
