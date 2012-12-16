@@ -1,4 +1,6 @@
 alpha
+
+0.2.0 (DEC 16, 2012)
   * add lib/tasks 
   * fixing typo
   * fixing deploy file
