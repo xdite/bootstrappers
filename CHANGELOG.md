@@ -2,7 +2,8 @@ alpha
   * add lib/tasks 
   * fixing typo
   * fixing deploy file
-  * update to bootstrap-helper 1.2.1
+  * update to bootstrap-helper 2.2.0
+  * update to bootstrap-helper 2.1.2.1
   * remove newrelic_rpm
   * rvm-capistrano
   
