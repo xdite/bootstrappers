@@ -31,6 +31,7 @@ group :development do
   gem "capistrano"
   gem "capistrano-ext"
   gem "cape"
+  gem "better_errors"
   gem "magic_encoding"
   gem "annotate"
   gem "powder"

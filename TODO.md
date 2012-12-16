@@ -21,10 +21,8 @@
   - multistage
 * Amazon SES
 * Caching
-  - add config.cache_stor t0 dali
-* Better Errors
+  - add config.cache_store to dali
 * Refactor Devise Views
 * add group hack to bootstrap css
 * add login required and require admin to applicaiton controller
-* add rvm-capistrano
 * add admin to login_form

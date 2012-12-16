@@ -40,6 +40,7 @@ It includes application gems like:
 
 * [Capistrano](https://github.com/capistrano/capistrano)
 * [Cape](https://github.com/njonsson/cape)
+* [rvm-capistrano](https://github.com/wayneeseguin/rvm-capistrano)
 * [Airbrake](https://github.com/airbrake/airbrake)
 * [NewRelic RPM](https://github.com/newrelic/rpm)
 * [Turbo Sprockets for Rails 3.2.x](https://github.com/ndbroadbent/turbo-sprockets-rails3) Speeds up your Rails 3 rake assets:precompile by only recompiling changed assets
@@ -50,7 +51,9 @@ It includes application gems like:
 * [Settingslogic](https://github.com/binarylogic/settingslogic)
 * [Pry](http://pryrepl.org/)
 
+### Dev Enviorments
 
+* [Better Errors](https://github.com/charliesome/better_errors)
 
 ## Remind
 
