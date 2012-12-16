@@ -30,9 +30,11 @@ module Bootstrappers
       bundle_command 'exec rake db:create'
     end
 
-       def generate_devise
+    def generate_devise
       generate 'devise:install'
       generate 'devise User'
+      replace_in_file 'config/initializers/devise.rb', /config\.mailer_sender = \".+\"/m , "config.mailer_sender = Setting.email_sender"
+
     end
 
     def gitignore_files
