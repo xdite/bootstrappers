@@ -59,6 +59,7 @@ module Bootstrappers
 
       template 'setting.rb', 'app/models/setting.rb',:force => true
       template 'config_yml.erb', 'config/config.yml',:force => true
+      template 'config_yml.erb', 'config/config.yml.example',:force => true
     end
 
     def create_initializers
