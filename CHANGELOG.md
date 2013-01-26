@@ -1,5 +1,9 @@
 alpha
 
+0.2.0.1 (Jan 25, 2013)
+  * fix email_sender
+  * upgrade to Rails 3.2.11
+
 0.2.0 (DEC 16, 2012)
   * add lib/tasks 
   * fixing typo
