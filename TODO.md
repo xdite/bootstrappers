@@ -2,8 +2,6 @@
 
 * Search
   - ransack
-* OmniAuth
-  - Facebook
 * Devise
   - Login Form refactor
 * Cancan

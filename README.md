@@ -46,6 +46,7 @@ It includes application gems like:
 * [Turbo Sprockets for Rails 3.2.x](https://github.com/ndbroadbent/turbo-sprockets-rails3) Speeds up your Rails 3 rake assets:precompile by only recompiling changed assets
 
 ### CommandLine
+
 * [Magic encoding](https://github.com/m-ryan/magic_encoding)
 * [Annotate](https://github.com/ctran/annotate_models)
 * [Settingslogic](https://github.com/binarylogic/settingslogic)
