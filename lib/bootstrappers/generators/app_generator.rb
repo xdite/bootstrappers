@@ -99,7 +99,7 @@ module Bootstrappers
       build :setup_devise
       build :build_auto_facebook
       build :build_settings_from_config
-
+      build :build_admin_method_to_user
     end
 
     def create_initializers
@@ -114,6 +114,10 @@ module Bootstrappers
 
     def build_auto_facebook
       build :generate_auto_facebook
+    end
+
+    def build_admin_method_to_user
+      build :insert_admin_method_to_user
     end
 
     def customize_error_pages

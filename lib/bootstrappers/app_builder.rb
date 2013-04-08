@@ -39,6 +39,11 @@ module Bootstrappers
       generate 'auto_facebook:install'
     end
 
+    def insert_admin_method_to_user
+      inject_into_file 'app/models/user.rb',
+        "\n\n  def admin?\n    Setting.admin_emails.include?(email)\n  end\n", :after => '# attr_accessible :title, :body'
+    end
+
     def replace_email_sender_for_devise
       replace_in_file 'config/initializers/devise.rb', /config\.mailer_sender = \".+\"/ , "config.mailer_sender = Setting.email_sender"
     end
