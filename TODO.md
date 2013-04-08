@@ -20,5 +20,4 @@
 * Caching
   - add config.cache_store to dali
 * Refactor Devise Views
-* add require admin to applicaiton controller
 * add admin to menu
