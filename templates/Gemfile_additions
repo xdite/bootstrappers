@@ -20,6 +20,8 @@ gem "turbo-sprockets-rails3"
 gem "rvm-capistrano"
 
 
+gem "hipchat"
+
 # Cache
 gem "dalli"
 

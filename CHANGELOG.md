@@ -1,5 +1,9 @@
 alpha
 
+0.2.1 (Apr 8, 2013)
+
+* add hipchat
+
 0.2.0.1 (Jan 25, 2013)
   * fix email_sender
   * upgrade to Rails 3.2.11

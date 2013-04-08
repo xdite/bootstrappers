@@ -1,5 +1,8 @@
 # -*- encoding : utf-8 -*-
 
+raw_config = File.read("config/config.yml")
+APP_CONFIG = YAML.load(raw_config)
+
 require "./config/boot"
 require "bundler/capistrano"
 require "rvm-capistrano"
@@ -22,6 +25,10 @@ set :deploy_via, :remote_cache
 set :git_shallow_clone, 1
 set :use_sudo, false
 set :rvm_ruby_string, '1.9.3'
+
+set :hipchat_token, APP_CONFIG["production"]["hipchat_token"]
+set :hipchat_room_name, APP_CONFIG["production"]["hipchat_room_name"]
+set :hipchat_announce, false # notify users?
 
 role :web, "<%= app_name %>.com"                          # Your HTTP server, Apache/etc
 role :app, "<%= app_name %>.com"                         # This may be the same as your `Web` server
