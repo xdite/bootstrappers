@@ -97,6 +97,7 @@ module Bootstrappers
     def configure_app
       say 'Configuring app'
       build :setup_devise
+      build :build_auto_facebook
       build :build_settings_from_config
 
     end
@@ -109,6 +110,10 @@ module Bootstrappers
     def setup_devise
       build :generate_devise
       build :replace_email_sender_for_devise
+    end
+
+    def build_auto_facebook
+      build :generate_auto_facebook
     end
 
     def customize_error_pages

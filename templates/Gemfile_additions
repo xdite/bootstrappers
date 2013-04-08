@@ -19,6 +19,10 @@ gem "turbo-sprockets-rails3"
 
 gem "rvm-capistrano"
 
+gem "omniauth"
+gem "omniauth-facebook"
+gem "auto-facebook"
+
 
 gem "hipchat"
 

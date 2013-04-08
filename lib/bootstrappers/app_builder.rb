@@ -34,6 +34,11 @@ module Bootstrappers
       generate 'devise User'
     end
 
+    def generate_auto_facebook
+      generate 'auto_facebook:user'
+      generate 'auto_facebook:install'
+    end
+
     def replace_email_sender_for_devise
       replace_in_file 'config/initializers/devise.rb', /config\.mailer_sender = \".+\"/ , "config.mailer_sender = Setting.email_sender"
     end

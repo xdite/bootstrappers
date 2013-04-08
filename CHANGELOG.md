@@ -3,6 +3,7 @@ alpha
 0.2.1 (Apr 8, 2013)
 
 * add hipchat
+* add auto_facebook
 
 0.2.0.1 (Jan 25, 2013)
   * fix email_sender
