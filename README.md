@@ -8,6 +8,10 @@ First install the bootstrappers gem:
 
     gem install bootstrappers
 
+## Rails 4.0+
+  
+    gem install bootstrappers 4.0.rc1
+
 Then run:
 
     $ bootstrappers project_name
