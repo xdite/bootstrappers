@@ -56,7 +56,7 @@ module Bootstrappers
        'db/migrate',
        'log',
       ].each do |dir|
-        empty_directory_with_gitkeep dir
+        empty_directory_with_keep_file dir
       end
     end
 
