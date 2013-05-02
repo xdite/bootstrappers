@@ -8,14 +8,13 @@ gem "carrierwave-meta"
 gem "settingslogic"
 
 gem "anjlab-bootstrap-rails", ">= 2.2.2", :require => "bootstrap-rails"
-gem "bootstrap_helper", ">= 2.1.2.1"
-gem "simple_form", "2.0.3"
+gem "bootstrap_helper", ">= 4.2.2.1"
+gem "simple_form", "~> 3.0.0.beta1"
 gem "will_paginate", "3.0.3"
 
 gem "high_voltage"
 
 gem "airbrake"
-gem "turbo-sprockets-rails3"
 
 gem "rvm-capistrano"
 
@@ -30,7 +29,7 @@ gem "hipchat"
 gem "dalli"
 
 group :assets do
-  gem "compass-rails"
+  gem "compass-rails", :git => "git@github.com:Compass/compass-rails.git", :branch => "rails4"
 end
 
 group :development do
