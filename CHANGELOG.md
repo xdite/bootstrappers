@@ -1,6 +1,6 @@
 alpha
 
-0.2.1 (Apr 8, 2013)
+0.2.2 (Apr 8, 2013)
 
 * add hipchat
 * add auto_facebook
