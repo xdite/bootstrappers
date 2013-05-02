@@ -20,7 +20,7 @@ gem "rvm-capistrano"
 
 gem "omniauth"
 gem "omniauth-facebook"
-gem "auto-facebook"
+gem "auto-facebook", "0.1.rails4"
 
 
 gem "hipchat"
