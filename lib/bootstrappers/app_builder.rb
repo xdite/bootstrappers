@@ -14,7 +14,7 @@ module Bootstrappers
     end
 
     def add_devise_gem
-      inject_into_file 'Gemfile', "\ngem 'devise', '3.0.0.rc'",
+      inject_into_file 'Gemfile', "\ngem 'devise', '3.0.2'",
       :after => /gem 'jquery-rails'/
     end
 

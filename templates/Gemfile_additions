@@ -1,4 +1,4 @@
-gem "seo_helper", "~> 1.0"
+gem "seo_helper", "~> 1.0.2"
 gem "open_graph_helper"
 
 gem "rmagick"
@@ -20,7 +20,7 @@ gem "rvm-capistrano"
 
 gem "omniauth"
 gem "omniauth-facebook"
-gem "auto-facebook", "0.1.rails4"
+gem "auto-facebook", "0.4"
 
 
 gem "hipchat"
