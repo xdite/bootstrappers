@@ -1,4 +1,6 @@
-alpha
+4.2.0.3
+
+* FIX compass-rails
 
 0.2.1 (Apr 8, 2013)
 
