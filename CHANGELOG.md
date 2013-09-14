@@ -1,3 +1,7 @@
+4.2.0.4 
+
+* fix simple_form
+
 4.2.0.3
 
 * FIX compass-rails
