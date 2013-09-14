@@ -76,6 +76,7 @@ module Bootstrappers
     def customize_gemfile
       build :add_custom_gems
       build :add_devise_gem
+      build :add_rvmrc_and_powrc
       bundle_command 'install'
     end
 

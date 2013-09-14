@@ -1,3 +1,7 @@
+4.2.0.5 
+
+* add .powrc & .rvmrc
+
 4.2.0.4 
 
 * fix simple_form

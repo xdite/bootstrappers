@@ -18,6 +18,11 @@ module Bootstrappers
       :after => /gem 'jquery-rails'/
     end
 
+    def add_rvmrc_and_powrc
+      template "rc/.rvmrc", '.rvmrc', :force => true
+      template "rc/.powrc", '.powrc', :force => true
+    end
+
     def create_capistrano_files
       template 'capistrano/deploy_rb.erb', 'config/deploy.rb',:force => true
       template 'capistrano/Capfile', 'Capfile',:force => true
