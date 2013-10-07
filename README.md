@@ -31,7 +31,7 @@ It includes application gems like:
 * [WillPaginate](https://github.com/mislav/will_paginate/)
 * [Compass](http://compass-style.org/)
 
-### Photo Uplaod
+### Photo Upload
 
 * [CarrierWave](https://github.com/jnicklas/carrierwave)
 
