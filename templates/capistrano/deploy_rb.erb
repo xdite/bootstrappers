@@ -5,7 +5,10 @@ APP_CONFIG = YAML.load(raw_config)
 
 require "./config/boot"
 require "bundler/capistrano"
-require "rvm-capistrano"
+require "rvm/capistrano"
+require "cape"
+require "whenever/capistrano"
+
 
 default_environment["PATH"] = "/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin"
 
@@ -26,6 +29,7 @@ set :git_shallow_clone, 1
 set :use_sudo, false
 set :rvm_ruby_string, '1.9.3'
 
+set :whenever_command, "bundle exec whenever"
 set :hipchat_token, APP_CONFIG["production"]["hipchat_token"]
 set :hipchat_room_name, APP_CONFIG["production"]["hipchat_room_name"]
 set :hipchat_announce, false # notify users?
@@ -39,6 +43,13 @@ set :rails_env, "production"
 set :scm_verbose, true
 set :use_sudo, false
 
+
+Cape do
+  mirror_rake_tasks :dev do |recipies|
+    recipies.env['RAILS_ENV'] = rails_env
+  end
+
+end
 
 namespace :deploy do
 
