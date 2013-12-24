@@ -5,8 +5,6 @@ require 'rails/generators/rails/app/app_generator'
 module Bootstrappers
   class AppGenerator < Rails::Generators::AppGenerator
 
-    class_option :database, :type => :string, :aliases => '-d', :default => 'mysql',
-      :desc => "Preconfigure for selected database (options: #{DATABASES.join('/')})"
 
     def finish_template
       invoke :bootstrappers_customization
@@ -88,10 +86,7 @@ module Bootstrappers
     def setup_database
       say 'Setting up database'
 
-      if 'mysql' == options[:database]
-        build :use_mysql_config_template
-      end
-
+      build :use_mysql_config_template
       build :create_database
     end
 
