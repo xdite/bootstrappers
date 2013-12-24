@@ -14,8 +14,13 @@ module Bootstrappers
     end
 
     def add_devise_gem
-      inject_into_file 'Gemfile', "\ngem 'devise'",
+      inject_into_file 'Gemfile', "\ngem 'devise', '3.0.2'",
       :after => /gem 'jquery-rails'/
+    end
+
+    def add_rvmrc_and_powrc
+      template "rc/.rvmrc", '.rvmrc', :force => true
+      template "rc/.powrc", '.powrc', :force => true
     end
 
     def create_capistrano_files
@@ -56,7 +61,7 @@ module Bootstrappers
        'db/migrate',
        'log',
       ].each do |dir|
-        empty_directory_with_gitkeep dir
+        empty_directory_with_keep_file dir
       end
     end
 

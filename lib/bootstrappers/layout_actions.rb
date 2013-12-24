@@ -39,10 +39,7 @@ module Bootstrappers
       directory 'common', 'app/views/common'
     end
 
-    def add_jquery_ui
-      inject_into_file 'app/assets/javascripts/application.js',
-        "//= require jquery-ui\n", :before => '//= require_tree .'
-    end
+
 
     def add_bootstrap_js
       inject_into_file 'app/assets/javascripts/application.js',

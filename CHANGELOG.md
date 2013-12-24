@@ -1,4 +1,14 @@
-alpha
+4.2.0.5 
+
+* add .powrc & .rvmrc
+
+4.2.0.4 
+
+* fix simple_form
+
+4.2.0.3
+
+* FIX compass-rails
 
 0.2.2 (Apr 8, 2013)
 
