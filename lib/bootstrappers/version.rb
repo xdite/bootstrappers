@@ -1,3 +1,3 @@
 module Bootstrappers
-  VERSION = "4.2.0.11"
+  VERSION = "4.2.1"
 end
