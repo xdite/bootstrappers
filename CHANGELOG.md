@@ -1,3 +1,7 @@
+4.2.1.1
+
+* use og:image
+
 4.2.0.5 
 
 * add .powrc & .rvmrc
